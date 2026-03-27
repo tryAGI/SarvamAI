@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>C# SDK for the Sarvam AI API -- Indian language AI for chat, speech-to-text, text-to-speech, and translation</Description>
+    <PackageTags>api;client;sdk;dotnet;openapi;sarvam-ai;indian-languages;ai;autosdk;speech-to-text;text-to-speech;translation</PackageTags>
+  </PropertyGroup>
+
+</Project>
