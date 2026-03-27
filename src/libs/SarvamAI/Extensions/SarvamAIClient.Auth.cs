@@ -10,6 +10,7 @@ public partial class SarvamAIClient
     /// - All other endpoints use "api-subscription-key" header
     /// The generated code always sends Bearer auth, so we convert it for non-chat endpoints.
     /// </summary>
+#pragma warning disable CA1822 // Mark members as static
     partial void PrepareRequest(
         global::System.Net.Http.HttpClient client,
         global::System.Net.Http.HttpRequestMessage request)
@@ -24,4 +25,5 @@ public partial class SarvamAIClient
             }
         }
     }
+#pragma warning restore CA1822 // Mark members as static
 }
