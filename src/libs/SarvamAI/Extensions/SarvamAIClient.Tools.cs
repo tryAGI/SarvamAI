@@ -1,3 +1,4 @@
+#pragma warning disable CS3002 // Return type is not CLS-compliant
 using Microsoft.Extensions.AI;
 
 namespace SarvamAI;
