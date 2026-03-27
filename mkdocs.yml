@@ -2,6 +2,8 @@ site_name: SarvamAI .NET Documentation
 nav:
 - Overview: index.md
 - Guides:
+  - Authentication: guides/authentication.md
+  - Supported Languages: guides/languages.md
   - MEAI Integration: guides/meai.md
 # EXAMPLES:START
 # EXAMPLES:END
