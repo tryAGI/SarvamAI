@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-dotnet tool update --global autosdk.cli --prerelease || dotnet tool install --global autosdk.cli --prerelease
+dotnet tool install --global autosdk.cli --prerelease
 
 rm -rf Generated
 
