@@ -1,10 +1,9 @@
 # Microsoft.Extensions.AI Integration
 
-SarvamAI implements
-[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
-interfaces for chat completions (`IChatClient`) and speech-to-text transcription
-(`ISpeechToTextClient`), plus `AIFunction` tools for translation, transliteration,
-and language detection.
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The SarvamAI SDK implements `IChatClient` and `ISpeechToTextClient` and provides `AIFunction` tool wrappers, all compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai).
 
 ## IChatClient
 
