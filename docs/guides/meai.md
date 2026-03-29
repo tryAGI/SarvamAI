@@ -83,6 +83,57 @@ var options = new SpeechToTextOptions
 var response = await client.GetTextAsync(audioStream, options);
 ```
 
+### Accessing the Raw Response
+
+The full Sarvam AI response is available via `RawRepresentation` for language detection confidence, timestamps, and diarized transcript data:
+
+```csharp
+using SarvamAI;
+using Microsoft.Extensions.AI;
+
+ISpeechToTextClient sttClient = new SarvamAIClient(apiKey);
+
+await using var audioStream = File.OpenRead("audio.wav");
+var response = await sttClient.GetTextAsync(audioStream, new SpeechToTextOptions
+{
+    SpeechLanguage = "hi-IN",
+    ModelId = "saaras:v3",
+});
+
+Console.WriteLine(response.Text);
+
+// Access the provider-specific response
+// Note: use SarvamAI.SpeechToTextResponse (not Microsoft.Extensions.AI.SpeechToTextResponse)
+var raw = (SarvamAI.SpeechToTextResponse)response.RawRepresentation!;
+Console.WriteLine($"Request ID: {raw.RequestId}");
+Console.WriteLine($"Detected language: {raw.LanguageCode}");
+Console.WriteLine($"Language confidence: {raw.LanguageProbability:P0}");
+
+// Access timestamps and diarized transcript when available
+if (raw.Timestamps is not null)
+{
+    Console.WriteLine($"Timestamps: {raw.Timestamps}");
+}
+if (raw.DiarizedTranscript is not null)
+{
+    Console.WriteLine($"Diarized transcript: {raw.DiarizedTranscript}");
+}
+```
+
+These provider-specific fields are also available via `AdditionalProperties` on the MEAI response:
+
+```csharp
+Console.WriteLine($"Language: {response.AdditionalProperties?["language_code"]}");
+Console.WriteLine($"Confidence: {response.AdditionalProperties?["language_probability"]}");
+Console.WriteLine($"Request ID: {response.AdditionalProperties?["request_id"]}");
+```
+
+### Streaming Behavior
+
+`GetStreamingTextAsync` delegates to the non-streaming `GetTextAsync` method internally. The Sarvam AI STT API processes audio synchronously, and then the full result is converted to `SpeechToTextResponseUpdate` events using `ToSpeechToTextResponseUpdates()`.
+
+This means you will not receive incremental transcription updates as audio is processed. The entire transcript is returned at once after processing completes. For most use cases, calling `GetTextAsync` directly is equivalent and simpler.
+
 ## Available Tools
 
 | Method | Tool Name | Description |
