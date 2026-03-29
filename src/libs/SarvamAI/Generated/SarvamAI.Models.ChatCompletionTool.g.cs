@@ -31,10 +31,10 @@ namespace SarvamAI
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatCompletionTool" /> class.
         /// </summary>
+        /// <param name="function"></param>
         /// <param name="type">
         /// The type of tool
         /// </param>
-        /// <param name="function"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -42,8 +42,8 @@ namespace SarvamAI
             global::SarvamAI.ChatCompletionToolFunction function,
             global::SarvamAI.ChatCompletionToolType type)
         {
-            this.Function = function ?? throw new global::System.ArgumentNullException(nameof(function));
             this.Type = type;
+            this.Function = function ?? throw new global::System.ArgumentNullException(nameof(function));
         }
 
         /// <summary>

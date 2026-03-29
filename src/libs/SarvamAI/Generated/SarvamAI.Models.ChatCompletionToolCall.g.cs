@@ -41,10 +41,10 @@ namespace SarvamAI
         /// <param name="id">
         /// Unique ID for this tool call
         /// </param>
+        /// <param name="function"></param>
         /// <param name="type">
         /// The type of tool call
         /// </param>
-        /// <param name="function"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -54,8 +54,8 @@ namespace SarvamAI
             global::SarvamAI.ChatCompletionToolCallType type)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Function = function ?? throw new global::System.ArgumentNullException(nameof(function));
             this.Type = type;
+            this.Function = function ?? throw new global::System.ArgumentNullException(nameof(function));
         }
 
         /// <summary>
