@@ -438,7 +438,6 @@ namespace SarvamAI
             string? dictId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::SarvamAI.TextToSpeechRequest
             {
                 Text = text,

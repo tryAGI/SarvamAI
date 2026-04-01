@@ -385,7 +385,6 @@ namespace SarvamAI
             string input,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::SarvamAI.DetectLanguageRequest
             {
                 Input = input,
