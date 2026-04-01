@@ -450,7 +450,6 @@ namespace SarvamAI
             global::SarvamAI.ChatCompletionRequestToolChoice? toolChoice = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::SarvamAI.ChatCompletionRequest
             {
                 Model = model,

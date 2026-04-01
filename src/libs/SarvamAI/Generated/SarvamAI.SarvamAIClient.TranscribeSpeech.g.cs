@@ -480,7 +480,6 @@ namespace SarvamAI
             global::SarvamAI.TranscribeSpeechRequestInputAudioCodec? inputAudioCodec = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::SarvamAI.TranscribeSpeechRequest
             {
                 File = file,

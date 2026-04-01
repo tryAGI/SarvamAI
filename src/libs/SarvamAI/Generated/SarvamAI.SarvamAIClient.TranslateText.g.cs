@@ -415,7 +415,6 @@ namespace SarvamAI
             global::SarvamAI.TranslateRequestNumeralsFormat? numeralsFormat = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::SarvamAI.TranslateRequest
             {
                 Input = input,
