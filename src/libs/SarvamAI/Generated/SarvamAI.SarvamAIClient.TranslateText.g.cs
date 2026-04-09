@@ -5,6 +5,25 @@ namespace SarvamAI
 {
     public partial class SarvamAIClient
     {
+
+
+        private static readonly global::SarvamAI.EndPointSecurityRequirement s_TranslateTextSecurityRequirement0 =
+            new global::SarvamAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::SarvamAI.EndPointAuthorizationRequirement[]
+                {                    new global::SarvamAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::SarvamAI.EndPointSecurityRequirement[] s_TranslateTextSecurityRequirements =
+            new global::SarvamAI.EndPointSecurityRequirement[]
+            {                s_TranslateTextSecurityRequirement0,
+            };
         partial void PrepareTranslateTextArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::SarvamAI.TranslateRequest request);
@@ -42,9 +61,15 @@ namespace SarvamAI
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::SarvamAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_TranslateTextSecurityRequirements,
+                operationName: "TranslateTextAsync");
+
             var __pathBuilder = new global::SarvamAI.PathBuilder(
                 path: "/translate",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -54,7 +79,7 @@ namespace SarvamAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

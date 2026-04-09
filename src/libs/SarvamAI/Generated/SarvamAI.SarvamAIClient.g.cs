@@ -14,7 +14,7 @@ namespace SarvamAI
         /// <summary>
         /// Production server
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.sarvam.ai";
+        public const string DefaultBaseUrl = "https://api.sarvam.ai/";
 
         private bool _disposeHttpClient = true;
 
