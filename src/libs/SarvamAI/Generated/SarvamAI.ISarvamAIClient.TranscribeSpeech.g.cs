@@ -11,11 +11,13 @@ namespace SarvamAI
         /// Audio files up to 30 seconds for synchronous processing.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SarvamAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.SpeechToTextResponse> TranscribeSpeechAsync(
 
             global::SarvamAI.TranscribeSpeechRequest request,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Transcribe speech to text<br/>
@@ -43,6 +45,7 @@ namespace SarvamAI
         /// <param name="inputAudioCodec">
         /// Required for PCM format files
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.SpeechToTextResponse> TranscribeSpeechAsync(
@@ -52,6 +55,7 @@ namespace SarvamAI
             global::SarvamAI.TranscribeSpeechRequestMode? mode = default,
             global::SarvamAI.TranscribeSpeechRequestLanguageCode? languageCode = default,
             global::SarvamAI.TranscribeSpeechRequestInputAudioCodec? inputAudioCodec = default,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

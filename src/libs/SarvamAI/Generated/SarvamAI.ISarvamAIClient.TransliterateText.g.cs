@@ -11,11 +11,13 @@ namespace SarvamAI
         /// Max 1000 characters per request.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SarvamAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.TransliterateResponse> TransliterateTextAsync(
 
             global::SarvamAI.TransliterateRequest request,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Transliterate text between scripts<br/>
@@ -44,6 +46,7 @@ namespace SarvamAI
         /// Language for spoken form numerals (only applies when spoken_form is true)<br/>
         /// Default Value: native
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.TransliterateResponse> TransliterateTextAsync(
@@ -53,6 +56,7 @@ namespace SarvamAI
             global::SarvamAI.TransliterateRequestNumeralsFormat? numeralsFormat = default,
             bool? spokenForm = default,
             global::SarvamAI.TransliterateRequestSpokenFormNumeralsLanguage? spokenFormNumeralsLanguage = default,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
