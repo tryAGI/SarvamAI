@@ -10,11 +10,13 @@ namespace SarvamAI
         /// plus English with options for formal, colloquial, and code-mixed styles.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SarvamAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.TranslateResponse> TranslateTextAsync(
 
             global::SarvamAI.TranslateRequest request,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Translate text between languages<br/>
@@ -47,6 +49,7 @@ namespace SarvamAI
         /// Format of numerals in the output<br/>
         /// Default Value: international
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.TranslateResponse> TranslateTextAsync(
@@ -58,6 +61,7 @@ namespace SarvamAI
             global::SarvamAI.TranslateRequestModel? model = default,
             global::SarvamAI.TranslateRequestOutputScript? outputScript = default,
             global::SarvamAI.TranslateRequestNumeralsFormat? numeralsFormat = default,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

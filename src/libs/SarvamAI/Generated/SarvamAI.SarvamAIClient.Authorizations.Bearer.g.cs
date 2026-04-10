@@ -25,6 +25,7 @@ namespace SarvamAI
             Authorizations.Add(new global::SarvamAI.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "BearerAuth",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

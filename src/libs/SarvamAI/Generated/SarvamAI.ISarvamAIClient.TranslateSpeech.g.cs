@@ -10,11 +10,13 @@ namespace SarvamAI
         /// Converts spoken Indian language directly into English text.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SarvamAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.SpeechToTextTranslateResponse> TranslateSpeechAsync(
 
             global::SarvamAI.TranslateSpeechRequest request,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Transcribe and translate speech to English<br/>
@@ -37,6 +39,7 @@ namespace SarvamAI
         /// <param name="inputAudioCodec">
         /// Required for PCM format files
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SarvamAI.SpeechToTextTranslateResponse> TranslateSpeechAsync(
@@ -45,6 +48,7 @@ namespace SarvamAI
             global::SarvamAI.TranslateSpeechRequestModel? model = default,
             global::SarvamAI.TranslateSpeechRequestLanguageCode? languageCode = default,
             global::SarvamAI.TranslateSpeechRequestInputAudioCodec? inputAudioCodec = default,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
