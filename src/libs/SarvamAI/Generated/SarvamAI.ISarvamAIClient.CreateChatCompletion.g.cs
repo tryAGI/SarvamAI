@@ -25,6 +25,21 @@ namespace SarvamAI
         /// Indian language LLMs including Sarvam-105B, Sarvam-30B, and Sarvam-M.<br/>
         /// Supports tool calling, streaming, and reasoning effort control.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::SarvamAI.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::SarvamAI.AutoSDKHttpResponse<global::SarvamAI.ChatCompletionResponse>> CreateChatCompletionAsResponseAsync(
+
+            global::SarvamAI.ChatCompletionRequest request,
+            global::SarvamAI.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a chat completion<br/>
+        /// Generates a model response for the given conversation. Supports Sarvam's<br/>
+        /// Indian language LLMs including Sarvam-105B, Sarvam-30B, and Sarvam-M.<br/>
+        /// Supports tool calling, streaming, and reasoning effort control.
+        /// </summary>
         /// <param name="model">
         /// Model ID to use for completion
         /// </param>
