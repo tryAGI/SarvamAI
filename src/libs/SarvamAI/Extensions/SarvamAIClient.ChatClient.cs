@@ -2,6 +2,7 @@
 
 using Microsoft.Extensions.AI;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Text.Json;
 
 namespace SarvamAI;
@@ -69,7 +70,7 @@ public sealed partial class SarvamAIClient : IChatClient
                         messages.Add(new ChatCompletionMessage
                         {
                             Role = ChatCompletionMessageRole.Tool,
-                            Content = frc.Result is string s ? s : JsonSerializer.Serialize(frc.Result),
+                            Content = frc.Result is string s ? s : SerializeValue(frc.Result),
                             ToolCallId = frc.CallId,
                         });
                     }
@@ -102,7 +103,7 @@ public sealed partial class SarvamAIClient : IChatClient
                             Function = new ChatCompletionToolCallFunction
                             {
                                 Name = fcc.Name,
-                                Arguments = JsonSerializer.Serialize(fcc.Arguments),
+                                Arguments = SerializeArguments(fcc.Arguments),
                             },
                         });
                     }
@@ -148,10 +149,9 @@ public sealed partial class SarvamAIClient : IChatClient
                             {
                                 Name = func.Name,
                                 Description = func.Description,
-                                Parameters = func.JsonSchema is { } schema
-                                    ? JsonSerializer.Deserialize<ChatCompletionToolFunctionParameters>(
-                                        JsonSerializer.Serialize(schema))
-                                    : null,
+                                Parameters = func.JsonSchema.ValueKind is JsonValueKind.Null or JsonValueKind.Undefined
+                                    ? null
+                                    : func.JsonSchema,
                             },
                         });
                     }
@@ -208,7 +208,7 @@ public sealed partial class SarvamAIClient : IChatClient
                     IDictionary<string, object?>? args = null;
                     if (tc.Function?.Arguments is { Length: > 0 } argsJson)
                     {
-                        args = JsonSerializer.Deserialize<Dictionary<string, object?>>(argsJson);
+                        args = ParseArguments(argsJson);
                     }
                     chatMessage.Contents.Add(new FunctionCallContent(
                         tc.Id ?? string.Empty,
@@ -247,5 +247,121 @@ public sealed partial class SarvamAIClient : IChatClient
         }
 
         return chatResponse;
+    }
+
+    private static Dictionary<string, object?>? ParseArguments(string argumentsJson)
+    {
+        try
+        {
+            using var document = JsonDocument.Parse(argumentsJson);
+            if (document.RootElement.ValueKind != JsonValueKind.Object)
+            {
+                return null;
+            }
+
+            var arguments = new Dictionary<string, object?>(StringComparer.Ordinal);
+            foreach (var property in document.RootElement.EnumerateObject())
+            {
+                arguments[property.Name] = property.Value.Clone();
+            }
+
+            return arguments;
+        }
+        catch (JsonException)
+        {
+            return null;
+        }
+    }
+
+    private static string SerializeArguments(IEnumerable<KeyValuePair<string, object?>>? arguments)
+    {
+        using var stream = new MemoryStream();
+        using (var writer = new Utf8JsonWriter(stream))
+        {
+            if (arguments is null)
+            {
+                writer.WriteStartObject();
+                writer.WriteEndObject();
+            }
+            else
+            {
+                WriteObject(writer, arguments);
+            }
+        }
+
+        return Encoding.UTF8.GetString(stream.ToArray());
+    }
+
+    private static string SerializeValue(object? value)
+    {
+        using var stream = new MemoryStream();
+        using (var writer = new Utf8JsonWriter(stream))
+        {
+            WriteValue(writer, value);
+        }
+
+        return Encoding.UTF8.GetString(stream.ToArray());
+    }
+
+    private static void WriteObject(Utf8JsonWriter writer, IEnumerable<KeyValuePair<string, object?>> values)
+    {
+        writer.WriteStartObject();
+        foreach (var (key, value) in values)
+        {
+            writer.WritePropertyName(key);
+            WriteValue(writer, value);
+        }
+        writer.WriteEndObject();
+    }
+
+    private static void WriteValue(Utf8JsonWriter writer, object? value)
+    {
+        switch (value)
+        {
+            case null:
+                writer.WriteNullValue();
+                break;
+            case JsonElement element:
+                element.WriteTo(writer);
+                break;
+            case string text:
+                writer.WriteStringValue(text);
+                break;
+            case bool boolean:
+                writer.WriteBooleanValue(boolean);
+                break;
+            case int number:
+                writer.WriteNumberValue(number);
+                break;
+            case long number:
+                writer.WriteNumberValue(number);
+                break;
+            case float number:
+                writer.WriteNumberValue(number);
+                break;
+            case double number:
+                writer.WriteNumberValue(number);
+                break;
+            case decimal number:
+                writer.WriteNumberValue(number);
+                break;
+            case IReadOnlyDictionary<string, object?> dictionary:
+                WriteObject(writer, dictionary);
+                break;
+            case IDictionary<string, object?> dictionary:
+                WriteObject(writer, dictionary);
+                break;
+            case IEnumerable<object?> items:
+                writer.WriteStartArray();
+                foreach (var item in items)
+                {
+                    WriteValue(writer, item);
+                }
+                writer.WriteEndArray();
+                break;
+            default:
+                writer.WriteStringValue(value.ToString());
+                break;
+        }
     }
 }
