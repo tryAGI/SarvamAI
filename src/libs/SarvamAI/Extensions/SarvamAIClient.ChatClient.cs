@@ -27,8 +27,8 @@ public sealed partial class SarvamAIClient : IChatClient
         var request = CreateChatCompletionRequest(chatMessages, options);
 
         var response = await CreateChatCompletionAsync(
-            request,
-            cancellationToken).ConfigureAwait(false);
+            request: request,
+            cancellationToken: cancellationToken).ConfigureAwait(false);
 
         return ToChatResponse(response, options);
     }
