@@ -42,5 +42,6 @@ namespace SarvamAI
         public DetectLanguageRequest()
         {
         }
+
     }
 }

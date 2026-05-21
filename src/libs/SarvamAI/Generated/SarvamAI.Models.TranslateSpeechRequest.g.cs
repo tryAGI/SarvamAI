@@ -92,5 +92,6 @@ namespace SarvamAI
         public TranslateSpeechRequest()
         {
         }
+
     }
 }
