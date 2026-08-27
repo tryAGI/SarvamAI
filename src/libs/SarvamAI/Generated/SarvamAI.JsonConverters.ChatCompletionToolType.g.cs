@@ -20,7 +20,7 @@ namespace SarvamAI.JsonConverters
                     {
                         return global::SarvamAI.ChatCompletionToolTypeExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

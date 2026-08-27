@@ -10,19 +10,19 @@ namespace SarvamAI
     public enum TranslateRequestMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClassicColloquial,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CodeMixed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Formal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModernColloquial,
     }

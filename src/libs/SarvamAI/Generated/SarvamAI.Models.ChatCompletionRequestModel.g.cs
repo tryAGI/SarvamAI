@@ -9,23 +9,23 @@ namespace SarvamAI
     public enum ChatCompletionRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sarvam105b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sarvam105b32k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sarvam30b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sarvam30b16k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SarvamM,
     }

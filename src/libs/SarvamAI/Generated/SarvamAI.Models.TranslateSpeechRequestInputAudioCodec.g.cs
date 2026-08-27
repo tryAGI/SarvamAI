@@ -9,99 +9,99 @@ namespace SarvamAI
     public enum TranslateSpeechRequestInputAudioCodec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aiff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Flac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mp3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mp4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mpeg3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ogg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Opus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PcmL16,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PcmRaw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PcmS16le,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wav,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wave,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Webm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XAac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XAiff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XFlac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XM4a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XMp3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XMpeg3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XMsWma,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         XWav,
     }

@@ -4,7 +4,7 @@
 namespace SarvamAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionChoice
     {
@@ -15,7 +15,7 @@ namespace SarvamAI
         public int? Index { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         public global::SarvamAI.ChatCompletionMessage? Message { get; set; }

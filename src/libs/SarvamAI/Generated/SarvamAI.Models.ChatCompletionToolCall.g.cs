@@ -4,7 +4,7 @@
 namespace SarvamAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionToolCall
     {
@@ -23,7 +23,7 @@ namespace SarvamAI
         public global::SarvamAI.ChatCompletionToolCallType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         [global::System.Text.Json.Serialization.JsonRequired]

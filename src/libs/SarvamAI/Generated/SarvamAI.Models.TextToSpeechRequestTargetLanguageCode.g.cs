@@ -9,47 +9,47 @@ namespace SarvamAI
     public enum TextToSpeechRequestTargetLanguageCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GuIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MrIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OdIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TeIn,
     }

@@ -4,12 +4,12 @@
 namespace SarvamAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ErrorResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public global::SarvamAI.ErrorDetail? Error { get; set; }

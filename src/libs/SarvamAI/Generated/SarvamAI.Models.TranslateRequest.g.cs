@@ -4,7 +4,7 @@
 namespace SarvamAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TranslateRequest
     {

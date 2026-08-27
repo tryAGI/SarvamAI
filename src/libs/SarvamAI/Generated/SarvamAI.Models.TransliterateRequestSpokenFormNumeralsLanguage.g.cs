@@ -10,11 +10,11 @@ namespace SarvamAI
     public enum TransliterateRequestSpokenFormNumeralsLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         English,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Native,
     }
