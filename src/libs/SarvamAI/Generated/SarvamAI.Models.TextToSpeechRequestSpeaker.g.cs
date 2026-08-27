@@ -9,27 +9,27 @@ namespace SarvamAI
     public enum TextToSpeechRequestSpeaker
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aayan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aditya,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Advait,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amelia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anand,
         /// <summary>
@@ -37,91 +37,91 @@ namespace SarvamAI
         /// </summary>
         Anushka,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ashutosh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dev,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gokul,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ishita,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kabir,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kavitha,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kavya,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mani,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mohit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neha,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pooja,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Priya,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rahul,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ratan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rehan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ritu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rohan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Roopa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rupali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shreya,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shruti,
         /// <summary>
@@ -129,43 +129,43 @@ namespace SarvamAI
         /// </summary>
         Shubh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simran,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Soham,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sophia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Suhani,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sumit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sunny,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tanya,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tarun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Varun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vijay,
     }

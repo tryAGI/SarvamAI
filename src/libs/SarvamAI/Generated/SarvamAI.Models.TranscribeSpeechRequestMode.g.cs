@@ -10,23 +10,23 @@ namespace SarvamAI
     public enum TranscribeSpeechRequestMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Codemix,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcribe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Translate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Translit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Verbatim,
     }

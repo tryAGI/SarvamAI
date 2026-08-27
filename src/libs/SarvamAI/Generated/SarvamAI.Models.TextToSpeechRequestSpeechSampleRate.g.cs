@@ -10,31 +10,31 @@ namespace SarvamAI
     public enum TextToSpeechRequestSpeechSampleRate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x16000,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x22050,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x24000,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x32000,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x44100,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x48000,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x8000,
     }

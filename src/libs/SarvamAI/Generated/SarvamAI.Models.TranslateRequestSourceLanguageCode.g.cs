@@ -9,7 +9,7 @@ namespace SarvamAI
     public enum TranslateRequestSourceLanguageCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AsIn,
         /// <summary>
@@ -17,91 +17,91 @@ namespace SarvamAI
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BrxIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DoiIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GuIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KokIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KsIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaiIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MniIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MrIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OdIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SatIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SdIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TeIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UrIn,
     }

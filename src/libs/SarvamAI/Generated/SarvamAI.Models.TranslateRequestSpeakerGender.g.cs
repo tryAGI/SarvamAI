@@ -9,11 +9,11 @@ namespace SarvamAI
     public enum TranslateRequestSpeakerGender
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Female,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Male,
     }

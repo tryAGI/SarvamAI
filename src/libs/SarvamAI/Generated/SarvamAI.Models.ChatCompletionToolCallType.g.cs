@@ -9,7 +9,7 @@ namespace SarvamAI
     public enum ChatCompletionToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

@@ -10,7 +10,7 @@ namespace SarvamAI
     public enum TranslateSpeechRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Saaras_v3,
     }

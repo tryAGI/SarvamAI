@@ -10,11 +10,11 @@ namespace SarvamAI
     public enum TranslateRequestNumeralsFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         International,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Native,
     }

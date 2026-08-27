@@ -9,15 +9,15 @@ namespace SarvamAI
     public enum TranslateRequestOutputScript
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FullyNative,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Roman,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpokenFormInNative,
     }

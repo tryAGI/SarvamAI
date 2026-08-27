@@ -10,11 +10,11 @@ namespace SarvamAI
     public enum TranscribeSpeechRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Saaras_v3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Saarika_v25,
     }

@@ -4,7 +4,7 @@
 namespace SarvamAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionResponse
     {
@@ -40,7 +40,7 @@ namespace SarvamAI
         public global::System.Collections.Generic.IList<global::SarvamAI.ChatCompletionChoice>? Choices { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::SarvamAI.ChatCompletionUsage? Usage { get; set; }

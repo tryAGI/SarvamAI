@@ -20,7 +20,7 @@ namespace SarvamAI.JsonConverters
                     {
                         return global::SarvamAI.TranscribeSpeechRequestInputAudioCodecExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

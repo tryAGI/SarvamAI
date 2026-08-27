@@ -9,35 +9,35 @@ namespace SarvamAI
     public enum ErrorDetailCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuthenticationError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InsufficientQuotaError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InternalServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidApiKeyError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidRequestError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotFoundError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RateLimitExceededError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnprocessableEntityError,
     }

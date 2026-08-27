@@ -9,11 +9,11 @@ namespace SarvamAI
     public enum TranslateRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mayura_v1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SarvamTranslate_v1,
     }

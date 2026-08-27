@@ -10,11 +10,11 @@ namespace SarvamAI
     public enum TextToSpeechRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulbul_v2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulbul_v3,
     }

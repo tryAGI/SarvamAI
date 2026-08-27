@@ -9,35 +9,35 @@ namespace SarvamAI
     public enum TextToSpeechRequestOutputAudioCodec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Alaw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Flac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Linear16,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mp3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mulaw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Opus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wav,
     }
